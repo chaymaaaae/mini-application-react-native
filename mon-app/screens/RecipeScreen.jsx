@@ -51,7 +51,7 @@ export default function RecipeScreen({ route }) {
   return (
     <ScrollView style={styles.container}>
 
-      {/* Image + bouton YouTube */}
+     
       <TouchableOpacity
         activeOpacity={recipe.strYoutube ? 0.8 : 1}
         onPress={() => recipe.strYoutube && Linking.openURL(recipe.strYoutube)}
@@ -71,7 +71,7 @@ export default function RecipeScreen({ route }) {
         )}
       </TouchableOpacity>
 
-      {/* Nom */}
+      
       <Text style={styles.title}>{recipe.strMeal}</Text>
 
       {/* Ingrédients */}
@@ -83,7 +83,7 @@ export default function RecipeScreen({ route }) {
         </View>
       ))}
 
-      {/* Instructions numérotées */}
+      
       <Text style={styles.sectionTitle}>Instructions</Text>
       {recipe.strInstructions
         .split(/\r?\n/)
